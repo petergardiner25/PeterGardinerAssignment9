@@ -11,11 +11,12 @@ namespace PeterGardinerAssignment3.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private MovieListContext context { get; set; }
+
+        public HomeController(MovieListContext movielist)
         {
-            _logger = logger;
+            context = movielist;
         }
 
         //return home page
@@ -39,6 +40,8 @@ namespace PeterGardinerAssignment3.Controllers
             if (ModelState.IsValid)
             {
                 Storage.AddApplication(AppResponse);
+                context.Movies.Add(AppResponse);
+                context.SaveChanges();
                 return View();
             }
             else

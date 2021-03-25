@@ -13,6 +13,6 @@ namespace PeterGardinerAssignment3.Models
 
         }
 
-        public DbSet<MovieListContext> Movies { get; set; }
+        public DbSet<ApplicationResponse> Movies { get; set; }
     }
 }

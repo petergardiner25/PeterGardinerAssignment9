@@ -8,8 +8,11 @@ namespace PeterGardinerAssignment3.Models
 {
     public class ApplicationResponse
     {
+        
         //getters and setters for each data field. Specifies required fields and sets parameters
-
+        [Key]
+        [Required]
+        public int MovieID { get; set; }
         [Required]
         public string Category { get; set; }
         [Required]
