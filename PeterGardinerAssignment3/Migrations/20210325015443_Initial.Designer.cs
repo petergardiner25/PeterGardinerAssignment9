@@ -8,7 +8,7 @@ using PeterGardinerAssignment3.Models;
 namespace PeterGardinerAssignment3.Migrations
 {
     [DbContext(typeof(MovieListContext))]
-    [Migration("20210325002239_Initial")]
+    [Migration("20210325015443_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
