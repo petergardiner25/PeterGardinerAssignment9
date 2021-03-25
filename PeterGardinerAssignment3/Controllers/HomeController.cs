@@ -11,12 +11,13 @@ namespace PeterGardinerAssignment3.Controllers
 {
     public class HomeController : Controller
     {
-
+        private readonly ILogger<HomeController> _logger;
         private MovieListContext context { get; set; }
 
-        public HomeController(MovieListContext movielist)
+        public HomeController(ILogger<HomeController> logger, MovieListContext con)
         {
-            context = movielist;
+            _logger = logger;
+            context = con;
         }
 
         //return home page
