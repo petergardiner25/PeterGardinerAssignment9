@@ -39,15 +39,12 @@ namespace PeterGardinerAssignment3.Controllers
         {
             if (ModelState.IsValid)
             {
-                Storage.AddApplication(AppResponse);
                 context.Movies.Add(AppResponse);
                 context.SaveChanges();
-                return View();
             }
-            else
-            {
+
                 return View();
-            }
+            
         }
 
         //returns movie list 
